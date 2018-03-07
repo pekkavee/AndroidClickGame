@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/pekkavee/AndroidClickGame/blob/master/app/src/main/res/drawable/Screenshot_20180307-123451.png"200"/>
+  <img src="https://github.com/pekkavee/AndroidClickGame/blob/master/app/src/main/res/drawable/Screenshot_20180307-123451.png"350"/>
 </p>
                                                                                                                                            
 <p align="center">
