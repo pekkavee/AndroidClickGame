@@ -1,15 +1,10 @@
 package com.example.color;
 
-//import android.animation.ArgbEvaluator;
-//import android.animation.ObjectAnimator;
-//import android.animation.ValueAnimator;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
-//import android.graphics.drawable.ColorDrawable;
-//import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +17,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
     private Activity mActivity;
-    private int o=1;
+    private int o;
     private int highScore;
 
 
@@ -37,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        o=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -72,14 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        // Set a click listener for button
         mButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                // Animate the layout background color
-               // animateColor(mCLayout,"backgroundColor",Color.RED,Color.BLUE);
-                if(o%20==0){
+
+                if(o%20==0 && o!=0){
                     mCLayout.setBackgroundColor(Color.WHITE);
                     mTextView.setTextColor(Color.BLACK);
                     mTextView.setText("LOPETA JO!");
@@ -87,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     mTextView2.setTextColor(Color.BLACK);
 
                 }
- else if(o%5==0){
+ else if(o%5==0 && o!=0){
                     mCLayout.setBackgroundColor(Color.GREEN);
                     mTextView.setTextColor(Color.WHITE);
                     mTextView.setText("BÖÖÖÖ");
@@ -117,9 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
                 mButton.setText("* "+o+" *");
 
-                // Animate the text view text color
-              //  animateColor(mTextView,"textColor",Color.BLUE,Color.RED);
-
             }
 
         });
@@ -131,26 +122,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Custom method to animate a color of specified property
-  //  protected void animateColor(View v,String propertyName, int startColor, int endColor){
-//        // Initialize a new value animator of type int
-//        ValueAnimator valueAnimator = ObjectAnimator.ofInt(
-//                v, // Target object
-//                propertyName, // Property name
-//                startColor, // Value
-//                endColor // Value
-//        );
-//
-//        // Set value animator evaluator
-//        valueAnimator.setEvaluator(new ArgbEvaluator());
-//        // Set animation duration in milliseconds
-//        valueAnimator.setDuration(1500);
-//        // Animation repeat count and mode
-//       valueAnimator.setRepeatCount(1);
-//        valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
-//
-//        // Finally, start the animation
-//        valueAnimator.start();
-//
-//    }
+ 
 }
